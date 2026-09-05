@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teknofest İHA Projesi</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1d4ed8', // blue-700
+                        secondary: '#1e40af', // blue-800
+                        dark: '#0f172a',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold text-primary tracking-tight">
+                        <i class="fa-solid fa-plane-up mr-2"></i>İHA<span class="text-dark">TİMİ</span>
+                    </a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-gray-600 hover:text-primary transition-colors font-medium">Ana Sayfa</a>
+                    <a href="#about" class="text-gray-600 hover:text-primary transition-colors font-medium">Hakkımızda</a>
+                    <a href="#specs" class="text-gray-600 hover:text-primary transition-colors font-medium">Özellikler</a>
+                    <a href="#gallery" class="text-gray-600 hover:text-primary transition-colors font-medium">Galeri</a>
+                    <a href="#contact" class="px-5 py-2.5 bg-primary text-white rounded-full hover:bg-secondary transition-all font-medium shadow-md hover:shadow-lg">İletişim</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none text-2xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium">Ana Sayfa</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium">Hakkımızda</a>
+                <a href="#specs" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium">Özellikler</a>
+                <a href="#gallery" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium">Galeri</a>
+                <a href="#contact" class="block px-3 py-2 text-primary font-bold hover:bg-gray-50 rounded-md">İletişim</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex items-center min-h-screen">
+        <div class="absolute inset-0 z-0 bg-dark">
+            <!-- Placeholder for Hero Image -->
+            <img src="https://images.unsplash.com/photo-1579820010410-c10411aaaa88?q=80&w=2097&auto=format&fit=crop" alt="İHA Background" class="w-full h-full object-cover opacity-30">
+            <div class="absolute inset-0 bg-gradient-to-r from-dark to-transparent"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="lg:w-2/3">
+                <span class="inline-block py-1 px-3 rounded-full bg-primary/20 text-blue-300 font-semibold text-sm mb-4 border border-primary/30">
+                    Teknofest 2026 İnsansız Hava Araçları Yarışması
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight mb-6 fade-in-up">
+                    Geleceğin Semalarında <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">İz Bırakıyoruz</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl fade-in-up" style="animation-delay: 0.2s;">
+                    Yenilikçi tasarım, yüksek otonomi yeteneği ve üstün görev performansı ile göklerin yeni hakimi olmaya geliyoruz.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 fade-in-up" style="animation-delay: 0.4s;">
+                    <a href="#about" class="px-8 py-4 bg-primary text-white rounded-full font-bold text-center hover:bg-secondary transition-all shadow-[0_0_15px_rgba(29,78,216,0.5)]">
+                        Projeyi Keşfet
+                    </a>
+                    <a href="#specs" class="px-8 py-4 bg-white/10 text-white border border-white/20 rounded-full font-bold text-center hover:bg-white/20 transition-all backdrop-blur-sm">
+                        Teknik Detaylar <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Hakkımızda</h2>
+                <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="rounded-2xl overflow-hidden shadow-2xl relative group">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop" alt="Takımımız" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500"></div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-dark">Vizyonumuz & Misyonumuz</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Biz, havacılık ve uzay teknolojilerine gönül vermiş genç mühendislerden oluşan bir takımız. Amacımız, ülkemizin milli teknoloji hamlesine katkıda bulunmak ve otonom sistemler alanında çığır açan çözümler üretmektir.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Geliştirdiğimiz İHA sistemi, arama kurtarma, çevre izleme ve lojistik gibi kritik görevleri insan müdahalesi olmadan otonom olarak gerçekleştirebilecek şekilde tasarlanmıştır.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-primary text-xl">
+                                <i class="fa-solid fa-microchip"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-dark">İleri Teknoloji</h4>
+                                <p class="text-sm text-gray-500">Yapay zeka destekli otonomi</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-primary text-xl">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-dark">Çevre Dostu</h4>
+                                <p class="text-sm text-gray-500">Elektrikli itki sistemi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specs Section -->
+    <section id="specs" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Teknik Özellikler</h2>
+                <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">İHA'mızın performansı sınırları zorlamak için optimize edildi.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Spec Card 1 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-gray-100">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-primary rounded-lg flex items-center justify-center text-white text-2xl mb-6 shadow-md">
+                        <i class="fa-solid fa-weight-scale"></i>
+                    </div>
+                    <h3 class="text-gray-500 text-sm font-semibold uppercase tracking-wider mb-1">Maksimum Kalkış Ağırlığı</h3>
+                    <p class="text-3xl font-bold text-dark">4.5 <span class="text-lg text-gray-400">kg</span></p>
+                </div>
+
+                <!-- Spec Card 2 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-gray-100">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-primary rounded-lg flex items-center justify-center text-white text-2xl mb-6 shadow-md">
+                        <i class="fa-solid fa-stopwatch"></i>
+                    </div>
+                    <h3 class="text-gray-500 text-sm font-semibold uppercase tracking-wider mb-1">Uçuş Süresi</h3>
+                    <p class="text-3xl font-bold text-dark">45 <span class="text-lg text-gray-400">dk</span></p>
+                </div>
+
+                <!-- Spec Card 3 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-gray-100">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-primary rounded-lg flex items-center justify-center text-white text-2xl mb-6 shadow-md">
+                        <i class="fa-solid fa-gauge-high"></i>
+                    </div>
+                    <h3 class="text-gray-500 text-sm font-semibold uppercase tracking-wider mb-1">Seyir Hızı</h3>
+                    <p class="text-3xl font-bold text-dark">20 <span class="text-lg text-gray-400">m/s</span></p>
+                </div>
+
+                <!-- Spec Card 4 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-gray-100">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-primary rounded-lg flex items-center justify-center text-white text-2xl mb-6 shadow-md">
+                        <i class="fa-solid fa-box-open"></i>
+                    </div>
+                    <h3 class="text-gray-500 text-sm font-semibold uppercase tracking-wider mb-1">Faydalı Yük Kapasitesi</h3>
+                    <p class="text-3xl font-bold text-dark">1.2 <span class="text-lg text-gray-400">kg</span></p>
+                </div>
+            </div>
+
+            <!-- 3D or Schematic Placeholder -->
+            <div class="mt-16 bg-white p-4 rounded-2xl shadow-xl border border-gray-100">
+                <div class="aspect-w-16 aspect-h-9 bg-gray-100 rounded-xl flex items-center justify-center text-gray-400 relative overflow-hidden h-[400px]">
+                    <img src="https://images.unsplash.com/photo-1524143986875-3b098d78b363?q=80&w=2070&auto=format&fit=crop" alt="İHA Blueprint" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-dark/60 flex flex-col items-center justify-center text-white p-4">
+                         <i class="fa-solid fa-vr-cardboard text-5xl mb-4 opacity-80"></i>
+                         <p class="text-xl font-medium tracking-wide">Tasarım Şeması</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Galeri</h2>
+                <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600">Üretim aşamasından test uçuşlarına anılarımız.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-md cursor-pointer aspect-square">
+                    <img src="https://images.unsplash.com/photo-1521405785232-6a36d9070a2f?q=80&w=2070&auto=format&fit=crop" alt="Üretim" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <span class="text-white font-semibold text-lg">Tasarım Süreci</span>
+                    </div>
+                </div>
+                <!-- Gallery Item 2 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-md cursor-pointer aspect-square">
+                    <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=2139&auto=format&fit=crop" alt="Test" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <span class="text-white font-semibold text-lg">Avyonik Testler</span>
+                    </div>
+                </div>
+                <!-- Gallery Item 3 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-md cursor-pointer aspect-square">
+                    <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?q=80&w=2070&auto=format&fit=crop" alt="Uçuş" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <span class="text-white font-semibold text-lg">İlk Uçuş</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Bize Ulaşın</h2>
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        Sponsorluk görüşmeleri, proje detayları veya destek olmak için bizimle iletişime geçebilirsiniz.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-xl text-blue-400 mr-4">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm text-gray-400">E-Posta</h4>
+                                <a href="mailto:info@ihatimi.com" class="text-lg hover:text-blue-400 transition-colors">info@ihatimi.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-xl text-blue-400 mr-4">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm text-gray-400">Adres</h4>
+                                <p class="text-lg">Üniversite Kampüsü, Teknokent</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-10">
+                        <h4 class="text-sm text-gray-400 mb-4">Bizi Takip Edin</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-primary hover:-translate-y-1 transition-all">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-primary hover:-translate-y-1 transition-all">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-primary hover:-translate-y-1 transition-all">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-primary hover:-translate-y-1 transition-all">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white/5 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Adınız Soyadınız</label>
+                            <input type="text" id="name" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" placeholder="Adınız">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">E-Posta Adresiniz</label>
+                            <input type="email" id="email" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" placeholder="ornek@email.com">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Mesajınız</label>
+                            <textarea id="message" rows="4" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" placeholder="Mesajınızı buraya yazın..."></textarea>
+                        </div>
+                        <button type="button" onclick="alert('Mesajınız gönderildi! (Demo)')" class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg transition-colors flex items-center justify-center">
+                            Gönder <i class="fa-solid fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0a0f1c] border-t border-white/10 py-8 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                &copy; 2026 İHA TİMİ. Tüm hakları saklıdır. Teknofest İçin Hazırlandı.
+            </p>
+            <div class="flex items-center text-sm text-gray-400">
+                <span>Geliştiren: </span>
+                <a href="#" class="text-blue-400 hover:text-blue-300 ml-1 font-medium">Takım Yazılım Ekibi</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
